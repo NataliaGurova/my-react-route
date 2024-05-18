@@ -1,0 +1,22 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.input {
+  padding: 5px 32px 5px 8px;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 250px;
+  font: inherit;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 20px;
+}
