@@ -1,40 +1,15 @@
-import {useState, useEffect} from "react"
-import { getTrendingMovies } from "../../api/apiService";
-import { MovieList } from "../../components/MovieList/MovieList";
-import { Loader } from "../../components/Loader/Loader"
-import css from "./HomePage.module.css"
-
-const HomePage = () => {
-  const [movies, setMovies] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  
-  
-  useEffect(() => {
-    setLoading(true);
-    const fetchTrendingMovies = async () => {
-      try {
-        const moviesData = await getTrendingMovies();
-        setMovies(moviesData);      
-      } catch (error) {
-        setError(error.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchTrendingMovies();
-    
-  }, [])
-  
+export default function HomePage() {
   return (
-    <main className={css.container}>
-      <h1 className={css.text}>Trending today</h1>
-      {loading && <Loader />}
-      {error && <p>An error has occurred</p>}
-      <MovieList className={css.list} movies={movies} />
+    <main>
+      <h1>Welcome</h1>
+      <img src="https://via.placeholder.com/960x240" alt="" />
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto,
+        laboriosam placeat incidunt rem illum animi nemo quibusdam quia
+        voluptatum voluptate.
+      </p>
     </main>
-  )
+  );
 }
 
-export default HomePage;
+

@@ -3,13 +3,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 8px 24px;
-  /* margin-bottom: 16px; */
+  padding: 8px 0;
+  margin-bottom: 16px;
   border-bottom: 1px solid black;
-    /* outline: 2px solid green; */
-    /* padding: 24px; */
-    /* position: sticky; */
-    top: 0;
 }
 
 .nav {
@@ -31,5 +27,5 @@
 
 .active {
   color: white;
-  background-color: rgb(255, 144, 60);
+  background-color: orangered;
 }
